@@ -12,7 +12,7 @@ export const useAuthStore=create((set,get)=>({
 
     isSigningUp:false,
 
-    isLoggingIng:false,
+    isLoggingIn:false,
 
     isUpdatingProfile:false,
     isCheckingAuth:true,
@@ -61,7 +61,7 @@ export const useAuthStore=create((set,get)=>({
     },
 
     login:async(data)=>{
-        set({isLoggingIng:true});
+        set({isLoggingIn:true});
         try {
             const res=await axiosInstance.post("/auth/login",data);
              useChatStore.getState().resetChat(); 
@@ -74,7 +74,7 @@ export const useAuthStore=create((set,get)=>({
             toast.error(error.response.data.message);
             
         }finally{
-            set({isLoggingIng:false});
+            set({isLoggingIn:false});
         }
 
 
