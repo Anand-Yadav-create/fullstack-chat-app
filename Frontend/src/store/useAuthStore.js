@@ -5,7 +5,11 @@ import {io} from "socket.io-client";
 
 import { useChatStore } from "./useChatStore";
 
-const Base_Url= import.meta.env.MODE ==="development"?"http://localhost:5001":"/api";
+// const Base_Url= import.meta.env.MODE ==="development"?"http://localhost:5001":"/api";
+
+const Base_Url=import.meta.env.MODE === "development"
+  ? "http://localhost:5001"
+  : "https://fullstack-chat-app-ng4d.onrender.com";
 export const useAuthStore=create((set,get)=>({
 
     authUser:null,
