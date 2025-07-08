@@ -20,7 +20,12 @@ const LoginPage = () => {
   };
   
   return (
-    <div className="min-h-screen grid lg:grid-cols-2">
+
+    <div className="flex flex-col md:flex-row min-h-screen">
+   
+    {/* // <div className="min-h-screen grid lg:grid-cols-2"> */}
+
+      <div className="w-full md:w-1/2 flex justify-center items-center bg-white p-6">
 
     {/* left side */}
     
@@ -110,11 +115,20 @@ const LoginPage = () => {
     </div>
 
     {/* right side */}
-    <AuthImagePattern
+    {/* <AuthImagePattern
     title="Join Our community"
     subtitle="Connect with friends, share moments, and stay in touch with you"
     
-    />
+    /> */}
+
+     
+  </div>
+
+     <div className="w-full md:w-1/2 flex justify-center items-center bg-base-200 p-6">
+    <AuthImagePattern title="Join Our Community" subtitle="Connect with friends, share moments, and stay in touch" />
+  </div>
+
+
   </div>
   )
 };
